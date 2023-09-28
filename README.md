@@ -9,7 +9,7 @@ The generator allows you to generate flattened classes from rich domain classes.
 ## Installation
 
 ```bash
-  dotnet add package Kros.Generators.Flattening
+  dotnet add package GoLive.Generator.Flattening
 ```
 
 ## How to use it
