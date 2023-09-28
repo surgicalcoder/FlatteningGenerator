@@ -1,3 +1,6 @@
+# Credits
+
+Based on the excellent work by [Kros-sk](https://github.com/Kros-sk/Kros.Generators.Flattening), just updated a few packages and made this work for file namespaces.
 
 # Flattening generator
 

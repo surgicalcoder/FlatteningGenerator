@@ -39,9 +39,18 @@ namespace Kros.Generators.Flattening
             => classDeclaration.Modifiers.ToFullString().Trim();
 
         public static string GetNamespace(this CompilationUnitSyntax root)
-            => root.ChildNodes()
+        {
+            var fileNamespace = root.ChildNodes().OfType<FileScopedNamespaceDeclarationSyntax>().FirstOrDefault();
+
+            if (fileNamespace != null)
+            {
+                return fileNamespace.Name.ToString();
+            }
+
+            return root.ChildNodes()
                 .OfType<NamespaceDeclarationSyntax>()
                 .First().Name.ToString();
+        }
 
         public static bool ContainsArguments(this AttributeSyntax attribute, string argumentName)
             => attribute
